@@ -1,0 +1,354 @@
+/* fonts.google.com for text  */
+
+:root {
+    --primaryColor: #1c2023;
+    --secondaryColor: #f6a821;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto sans-serif Display', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: var(--primaryColor);
+}
+
+#container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#container .header {
+    height: 40px;
+    width: 100%;
+    background: var(--secondaryColor);
+    position: relative;
+}
+
+#container .header .sociallinks {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+
+#container .header .sociallinks a {
+    height: 30px;
+    width: 30px;
+    background: #ffffff30;
+    display: grid;
+    place-items: center;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#container .header .sociallinks a i {
+    color: #1c2023;
+    font-size: 13px;
+
+}
+
+#container .header .sociallinks a:hover {
+    background: #fc010140;
+}
+
+/* banner section cs */
+#container .banner {
+    height: auto;
+    width: 100%;
+    background: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 0;
+}
+
+#container .banner h2 {
+    font-size: 70px;
+    padding: 0 50px;
+    color: var(--secondaryColor);
+}
+
+#container .banner p {
+    padding: 0 20%;
+}
+
+/* navigation bar */
+#container #navBtn {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid var(--secondaryColor);
+    display: none;
+
+
+}
+
+#container #navBtn i {
+    font-size: 25px;
+    position: absolute;
+    left: 13%;
+    height: 60px;
+    width: 60px;
+    display: grid;
+    place-items: center;
+    background: var(--secondaryColor);
+}
+
+#container .close {
+    display: none;
+
+}
+
+#container .navbar {
+    height: 60px;
+    width: 100%;
+    display: grid;
+    background: var(--secondaryColor);
+    border: 1px solid var(--secondaryColor);
+    z-index: 999;
+}
+
+#container .navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#container .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    height: 60px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid var(--secondaryColor);
+}
+
+#container .navbar ul li a:hover,
+#container .navbar ul .active a {
+    background: #e2e2e2;
+    color: var(--secondaryColor);
+}
+
+#container .navbar ul li a i {
+    margin: 0n 10px;
+    font-size: 20px;
+    border: none;
+}
+
+#container .navbar ul li ul {
+    background: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    display: none;
+}
+
+#container .navbar ul li ul li a {
+    color: #fff;
+    padding: 0 20px;
+}
+
+#container .navbar ul li:hover>ul {
+    display: block;
+}
+
+#container .navbar ul li ul li a:hover {
+    background: #e2e2e2;
+    color: var(--secondaryColor);
+}
+
+/* post section */
+#container #section {
+    height: auto;
+    width: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    z-index: 998;
+}
+
+#container #section #content .sectionTittle {
+    padding: 0 15px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--secondaryColor);
+
+}
+
+/* post section css */
+#container #section #content .post {
+    height: auto;
+    width: 100%;
+    display: grid;
+    padding: 0 20px;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 40px;
+}
+
+#container #section #content .post .postcards {
+    width: 200px;
+    height: 380px;
+    background: var(--secondaryColor);
+    border: 2px solid var(--secondaryColor);
+}
+
+#container #section #content .post .postcards a {
+    text-decoration: none;
+}
+
+#container #section #content .post .postcards a img {
+    width: 100%;
+    height: 280px;
+}
+
+#container #section #content .post .postcards a .postTittle {
+    height: 80px;
+    font-size: 14px;
+    margin: 4px 0;
+    padding: 0 5px;
+    color: #000;
+}
+
+#container #section #content .post .postcards:hover {
+    transform: translateY(-10px);
+    transition: .5s all linear;
+}
+
+/*  pagination */
+#container #pagination{
+    width: 100%;
+    background: #e2e2e2;
+    margin: 30px 0;
+    position: relative;
+    left: 0;
+}
+#container #pagination ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 12%;
+    flex-wrap: wrap;
+}
+#container #pagination ul li{
+    margin: 0 2px;
+}
+#container #pagination ul li a{
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    background: var(--secondaryColor);
+    text-decoration: none;
+    color: #e2e2e2;
+    border-radius: 4px;
+}
+#container #pagination ul li a:hover,
+#container #pagination ul .active a{
+    background: #e2e2e2;
+    color: var(--secondaryColor);
+}
+#container .footer{
+    min-height: 70px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--secondaryColor);
+    margin: 30px 0 0 0 ;
+
+}
+#container .footer h2{
+    color: #e2e2e2;
+    font-size: 15px;
+}
+#container .footer h2 a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media only screen and (max-width:1240px){
+    #container #section #content .post{
+        display: grid;
+        grid-template-columns: repeat(4,200px);
+    }
+}
+
+@media only screen and (max-width:1030px){
+    #container #section #content .post{
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+    }
+}
+
+
+/* responsive  navigation bar*/
+#container #navBtn{
+    display: block;
+
+}
+#container .navbar{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: auto;
+    width: 300px;
+    overflow: inherit;
+}
+#container .navbar ul{
+    display: flex;
+    flex-direction: column;
+}
+#container .navbar ul li a{
+    width: 300px;
+}
+#container .navbar ul li ul li a{
+    width: 300px;
+
+}
+#container .navbar .close{
+    height: 60px;
+    width: 60px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: -60px;
+    top:0;
+    background: var(--secondaryColor);
+    color: #fff;
+    border-radius: 0 30px 0 0;
+    font-size: 22px;
+}
+
+@media only screen and (max-width:730px){
+    #container #section #content .post{
+        display: grid;
+        grid-template-columns: repeat(2,200px);
+    }
+}
+@media only screen and (max-width:480px){
+    #container #section #content .post{
+        display: grid;
+        grid-template-columns: repeat(1,200px);
+    }
+}
